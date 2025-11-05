@@ -1,10 +1,13 @@
-# Astro Starter Kit: Basics
+# Real Estate Agent: Basics
+
+> 🚀 **Clone Repository** Click [here](https://github.com/imshibaji/realestate-agent.git) to open this project in your code editor.
 
 ```sh
-npm create astro@latest -- --template basics
+git clone https://github.com/imshibaji/realestate-agent.git
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+
+> 🧑‍🚀 **Seasoned Developer?** Create your app. Have fun!
 
 ## 🚀 Project Structure
 
