@@ -16,7 +16,26 @@ import AdbIcon from '@mui/icons-material/Adb';
 import astro from '../assets/astro.svg';
 
 
-const pages = ['Products', 'Pricing', 'Blog'];
+const pages = [{
+  name: 'Home',
+  url: '/'
+}, 
+{
+  name: 'Properties',
+  url: '/properties'
+},
+{
+  name: 'Blog',
+  url: '/blog'
+},
+{
+  name: 'About',
+  url: '/about'
+}, 
+{
+  name: 'Contact',
+  url: '/contact'
+}];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function ResponsiveAppBar() {
@@ -89,8 +108,10 @@ function ResponsiveAppBar() {
               sx={{ display: { xs: 'block', md: 'none' } }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography sx={{ textAlign: 'center' }}>{page}</Typography>
+                <MenuItem key={page.name} onClick={handleCloseNavMenu}>
+                  <Button className="text-base" href={page.url}>
+                    <Typography sx={{ textAlign: 'center' }}>{page.name}</Typography>
+                  </Button>
                 </MenuItem>
               ))}
             </Menu>
@@ -117,11 +138,12 @@ function ResponsiveAppBar() {
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
-                key={page}
+                key={page.name}
+                href={page.url}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
-                {page}
+                {page.name}
               </Button>
             ))}
           </Box>
