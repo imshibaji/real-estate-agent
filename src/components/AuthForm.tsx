@@ -72,6 +72,10 @@ export default function AuthForm() {
             </button>
           </div>
         </form>
+
+        <div className="mt-4 text-center text-sm text-zinc-500">
+          Dont Have Account? <a href="/signup" className="font-semibold text-blue-500">SignUp</a>
+        </div>
       </div>
     </motion.div>
   );
